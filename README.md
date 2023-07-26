@@ -48,7 +48,9 @@ Contoh potensi manfaat dari hasil prediksi harga rumah yang akurat adalag memban
 
 ## Data Understanding
 Data yang digunakan dalam pembuatan model merupakan data sekunder. Data diambil dari Kaggle dengan nama dataset yaitu California House Price. 
+
 URL: https://www.kaggle.com/datasets/shibumohapatra/house-price
+
 Berikut merupakan detail dari dataset yang digunakan untuk pembuatan model:
 - Dataset berupa CSV
 - Dataset terdiri dari 20640 records dengan 10 buah fitur yang diukur.
@@ -67,7 +69,7 @@ Berikut merupakan detail dari dataset yang digunakan untuk pembuatan model:
 - ocean_proximity : posisi relatif lokasi rumah terhadap lautan/laut (berupa kategori 'NEAR BAY', '<1H OCEAN', 'INLAND', 'NEAR OCEAN', 'ISLAND')
 - median_house_value : median harga rumah untuk rumah tangga dalam satu blok (diukur dalam Dolar AS)
 
-Untuk memahami data lebih lanjut, dilakukan teknik visualisasi data seperti menggunakan catplot, pairplot, dan heatmap. Serta dilakukan juga exploratory data analysis.
+Untuk memahami data lebih lanjut, dilakukan analisis univariat dan analisis multivariat. Analisis Univariat merupakan bentuk analisis data yang hanya merepresentasikan informasi yang terdapat pada satu variabel.  Jenis visualisasi ini umumnya digunakan untuk memberikan kita gambaran terkait distribusi sebuah variabel dalam suatu dataset. Sedangkan, Analisis Multivariat tmerupakan jenis analisis data yang terdapat dalam lebih dari dua variabel. Jenis visualisasi ini digunakan untuk merepresentasikan hubungan dan pola yang terdapat dalam multidimensional data. Selain melalui analisisi, dilakukan juga teknik visualisasi. Memvisualisasikan data memberikan wawasan mendalam tentang perilaku berbagai fitur-fitur yang tersedia dalam dataset. Teknik visualisi yang digunakan pada pembuatan model proyek ini adalah dengan menggunakan catplot yang digunakan untuk memplot distribusi data pada data kategori, pairplot yang digunakan untuk melakukan hubungan antar fitur dalam dataset, dan heatmap yang menampilkan korelasi antar fitur yang ada dalam dataset dalam bentuk matriks.
 
 ## Data Preparation
 Pada proses Data Preparation dilakukan kegiatan seperti Data Gathering, Data Assessing, dan Data Cleaning.
