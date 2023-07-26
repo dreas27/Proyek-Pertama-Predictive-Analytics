@@ -4,9 +4,9 @@
 
 Harga rumah merupakan faktor utama dalam pengambilan keputusan dalam aktivitas jual beli rumah [[1](https://www.researchgate.net/publication/353333759_Factors_Influencing_Housing_Purchase_Decision)] [[2](https://www.researchgate.net/publication/285661484_Housing_Market_A_Review_of_Purchase_Decision_of_Potential_Buyers)] [[3](https://www.researchgate.net/publication/354085963_Analysis_of_County_Consumers%27_Housing_Purchase_Intention_and_Influencing_Factors--Based_on_the_Investigation_of_Anyue_County)]. Kemampuan memprediksi harga rumah tentunya membantu pembeli sebelum melakukan transaksi jual beli rumah. 
 
-Dalam hal jual beli rumah harga sangat bergantung pada beberapa faktor, seperti lokasi geografis, demografi, jumlah ruangan, dan lainnya. Salah satu faktor yang menarik untuk ditelusuri lebih lanjut adalah faktor view dari rumah [[4](https://www.sciencedirect.com/science/article/pii/S0264275118312241)] [[5](https://www.researchgate.net/publication/333880192_The_price_of_a_view_Estimating_the_impact_of_view_on_house_prices)]. Oleh karena itu, dengan mempertimbangkan faktor-faktor tersebut, yang juga tersedia pada dataset, kita akan mengestimasi harga dari rumah tersebut dan melihat seberapa besar korelasi pengaruh faktor-faktor tersebut.
+Dalam hal jual beli rumah harga sangat bergantung pada beberapa faktor, seperti lokasi geografis, demografi, jumlah ruangan, dan lainnya. Salah satu faktor yang menarik untuk ditelusuri lebih lanjut adalah faktor view dari rumah [[4](https://www.sciencedirect.com/science/article/pii/S0264275118312241)] [[5](https://www.researchgate.net/publication/333880192_The_price_of_a_view_Estimating_the_impact_of_view_on_house_prices)]. Oleh karena itu, dengan mempertimbangkan faktor-faktor tersebut, yang juga tersedia pada dataset, maka dapat diestimasi harga dari rumah tersebut dan melihat seberapa besar korelasi pengaruh faktor-faktor tersebut.
 
-Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah satu algoritma yang paling umum digunakan adalah regresi. Dengan menggunakan regresi dan memasukkan faktor-faktor dari rumah yang dituju diharapkan kita bisa memprediksi harga rumah yang dimaksud [[6](https://www.researchgate.net/publication/360473275_HOUSE_PRICE_PREDICTION_USING_LINEAR_REGRESSION_IN_ML)] [[7](https://www.researchgate.net/publication/364039805_Prediction_and_Analysis_of_Housing_Price_Based_on_the_Generalized_Linear_Regression_Model)] [[8](https://www.researchgate.net/publication/23534659_Determinants_of_House_Prices_A_Quantile_Regression_Approach)].
+Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah satu algoritma yang paling umum digunakan adalah regresi. Dengan menggunakan regresi dan memasukkan faktor-faktor dari rumah yang dituju diharapkan dapat memprediksi harga rumah yang dimaksud [[6](https://www.researchgate.net/publication/360473275_HOUSE_PRICE_PREDICTION_USING_LINEAR_REGRESSION_IN_ML)] [[7](https://www.researchgate.net/publication/364039805_Prediction_and_Analysis_of_Housing_Price_Based_on_the_Generalized_Linear_Regression_Model)] [[8](https://www.researchgate.net/publication/23534659_Determinants_of_House_Prices_A_Quantile_Regression_Approach)].
   
 ## Referensi:
 [1] Hassan, Mohammad Mujaheed & Ahmad, Nobaya & Hariza, Ahmad & Hashim, Ahmad. (2021). Factors Influencing Housing Purchase Decision. 11. 429-443. 10.6007/IJARBSS/v11-i7/10295.
@@ -27,6 +27,9 @@ Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah s
 
 ## Business Understanding
 
+Pengembangan model prediksi harga rumah memiliki potensi dampak atau manfaat berupa menjadi salah satu alat bantu dalam pengambilan keputusan oleh calon pembeli rumah.
+Contoh potensi manfaat dari hasil prediksi harga rumah yang akurat adalag membantu pembeli dan penjual membuat keputusan jual ataupu beli yang lebih bijaksana.
+
 ### Problem Statements
 - Berdasarkan eksplorasi dataset, fitur apa saja yang mempengaruhi dalam menentukan estimasi harga rumah?
 - Bagaimana mengolah dataset agar dapat dibuat model prediksi harga rumah?
@@ -44,21 +47,25 @@ Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah s
 - Untuk mengetahui perfoma model dilakukan pengecekan performa dengan metrik evaluasi.
 
 ## Data Understanding
-Data yang digunakan dalam pembuatan model merupakan data sekunder. Data diambil dari Kaggle. 
-
+Data yang digunakan dalam pembuatan model merupakan data sekunder. Data diambil dari Kaggle dengan nama dataset yaitu California House Price. 
 URL: https://www.kaggle.com/datasets/shibumohapatra/house-price
+Berikut merupakan detail dari dataset yang digunakan untuk pembuatan model:
+- Dataset berupa CSV
+- Dataset terdiri dari 20640 records dengan 10 buah fitur yang diukur.
+- Dataset terdiri dari 1 data kategori dan 9 data numerik.
+- Dataset memiliki missing value sejumlah 205 records
 
 ### Variabel-variabel pada dataset adalah sebagai berikut:
-- longitude : posisi bujur
-- latitude : posisi lintang
-- housing_median_age : usia rata-rata rumah
-- total_rooms : jumlah kamar
-- total_bedrooms : jumlah kamar tidur
-- population : populasi
-- households : jumlah rumah tangga
-- median_income : median pendapatan
-- ocean_proximity : kedekatan terhadap laut
-- median_house_value : median harga rumah
+- longitude : koordinat geografis yang digunakan untuk menunjukkan posisi suatu titik dari arah utara ke selatan yang digunakan menentukan posisi suatu titik pada permukaan bumi (diukur dalam satuan derajat)
+- latitude : koordinat geografis yang digunakan untuk menunjukkan posisi suatu titik dari arah timur ke barat yang digunakan menentukan posisi suatu titik pada permukaan bumi (diukur dalam satuan derajat)
+- housing_median_age : usia rata-rata sebuah rumah dalam satu blok. angka yang lebih rendah menunjukkan bangunan yang lebih baru (dalam satuan tahun)
+- total_rooms : Jumlah total kamar dalam satu blok (dalam satuan buah)
+- total_bedrooms : jumlah total kamar tidur dalam satu blok (dalam satuan buah)
+- population : jumlah total orang yang tinggal dalam satu blok (dalam satuan orang)
+- households : jumlah total rumah tangga, sekelompok orang yang tinggal di dalam satu unit rumah, untuk satu blok (dalam satuan orang)
+- median_income : pmedian endapatan untuk rumah tangga dalam satu blok rumah (diukur dalam Dolar AS)
+- ocean_proximity : posisi relatif lokasi rumah terhadap lautan/laut (berupa kategori 'NEAR BAY', '<1H OCEAN', 'INLAND', 'NEAR OCEAN', 'ISLAND')
+- median_house_value : median harga rumah untuk rumah tangga dalam satu blok (diukur dalam Dolar AS)
 
 Untuk memahami data lebih lanjut, dilakukan teknik visualisasi data seperti menggunakan catplot, pairplot, dan heatmap. Serta dilakukan juga exploratory data analysis.
 
