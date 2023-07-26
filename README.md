@@ -95,9 +95,11 @@ Pada proses Data Cleaning, secara garis besar, terdapat tiga metode yang dapat d
 Pada kasus proyek ini ditemukan Missing Value. Adapaun metode yang digunakan untuk mengatasi hal ini adalah dengan menerapkan imputation dimana data yang missing diganti dengan nilai mean. Untuk outlier sendiri dilakukan proses dropping dimana dataset yang sebelumnya berjumlah 20640 menjadi 17609.
  
 Semua proses ini diperlukan dalam rangka membuat model yang baik. Gambar 1a & 1b berikut merupakan perbandingan data sebelum dan setelah melalui proses Data Cleaning.
-Gambar 1a. Sebelum Data Cleaning ![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/89132f98-8fe3-4dda-912f-d289b6b4450f)
+![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/89132f98-8fe3-4dda-912f-d289b6b4450f)
+Gambar 1a. Sebelum Data Cleaning 
 
-Gambar 1b. Setelah Data Cleaning ![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/9c4fd4c3-829d-4eef-ba73-36c3c55dfc19)
+![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/9c4fd4c3-829d-4eef-ba73-36c3c55dfc19)
+Gambar 1b. Setelah Data Cleaning 
 
 Setelah melalui proses Data Cleaning, dataset dibagi menjadi data train dan data test untuk proses Modeling, dimana rasio pembagian data yang dipilih adalah 90:10 mengingat data test untuk rasio tersebut sudah terbilang cukup.
 
@@ -119,9 +121,11 @@ Andapun metrik yang sebagai alat ukur perfoma model yang dibuat antara lain **MS
 - MSE menghitung rata-rata dari selisih kuadrat antara nilai prediksi dan nilai aktual. Semakin kecil nilai MSE, semakin baik kualitas model tersebut.
 - R2 digunakan untuk menilai seberapa besar pengaruh variabel independen tertentu terhadap variabel dependen
 
-Berikut merupakan hasil dari evaluasi model
+Gambar 2 berikut merupakan hasil dari evaluasi model
 
-![Screenshot 2023-07-27 013836](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/3a6de2c8-da37-47bb-b4b4-8ffa57814c7c)
+![Screenshot 2023-07-27 015320](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/ebefda1e-c2ec-4c52-9b6a-3220fff2ae1a)
+Gambar 2. Perbandingan Model
+
 
 Berdasarkan hasil evaluasi, terlihat bahwa prediksi dengan Random Forest (RF), baik RF1 (tanpa tuning) ataupun RF2 (dengan tuning) memberikan hasil yang paling mendekati y_true, dimana nilai y_true yaitu 341700 dan nilai RF1 dan RF2 masing-masing yaitu 347466.0 dan 315645.2.
 
