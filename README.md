@@ -128,18 +128,22 @@ Untuk meningkatkan model, dilakukan hyperparamter tuning. Adapun paramater yang 
 ## Evaluation
 Andapun metrik yang sebagai alat ukur perfoma model yang dibuat antara lain **MSE · MAE · R2**. 
 
-Berikut merupakan rumus dan penjelasan dari masing-masing metrik yang digunakan:
+Berikut merupakan rumus dari masing-masing metrik yang digunakan:
 
 $$ MAE = (1/n) Σ |y<sub>i</sub> - ŷ<sub>i</sub>| $$
 
-- MAE menghitung rata-rata dari selisih absolut antara nilai prediksi dan nilai aktual. Semakin kecil nilai MAE, semakin baik kualitas model tersebut.
-
 $$ MSE = (1/n) Σ (y<sub>i</sub> - ŷ<sub>i</sub>)<sup>2</sup> $$
-
-- MSE menghitung rata-rata dari selisih kuadrat antara nilai prediksi dan nilai aktual. Semakin kecil nilai MSE, semakin baik kualitas model tersebut.
 
 $$ R<sup>2</sup> = 1 - (MSE / Var(y)) $$
 
+y<sub>i</sub> mewakili nilai yang diamati,
+ŷ<sub>i</sub> mewakili nilai prediksi,
+n adalah jumlah titik data,
+Var(y) mewakili varians dari nilai yang diamati.
+
+Berikut merupakan penjelasan kegunaan dari masing-masing metrik yang digunakan:
+- MAE menghitung rata-rata dari selisih absolut antara nilai prediksi dan nilai aktual. Semakin kecil nilai MAE, semakin baik kualitas model tersebut.
+- MSE menghitung rata-rata dari selisih kuadrat antara nilai prediksi dan nilai aktual. Semakin kecil nilai MSE, semakin baik kualitas model tersebut.
 - R2 digunakan untuk menilai seberapa besar pengaruh variabel independen tertentu terhadap variabel dependen
 
 Gambar 2 berikut merupakan hasil dari evaluasi model
