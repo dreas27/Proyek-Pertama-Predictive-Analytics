@@ -20,7 +20,7 @@ Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah s
 ### Problem Statements
 - Berdasarkan eksplorasi dataset, fitur apa saja yang mempengaruhi dalam menentukan estimasi harga rumah?
 - Bagaimana mengolah dataset agar dapat dibuat model prediksi harga rumah?
-- Bagaimanna cara memingkatkan nilai perfoma model prediksi harga rumah?
+- Bagaimanna cara meningkatkan nilai perfoma model prediksi harga rumah?
 
 ### Goals
 - Mengeksplorasi semua fitur yang tersedia pada dataset kemudian membuat melihat korelasi harga dari semua fitur yang sedia untuk melihat faktor apa saja yang paling berpengaruh sampai paling kurang berpengaruh terhadap harga rumah
