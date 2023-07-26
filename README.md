@@ -52,10 +52,10 @@ Data yang digunakan dalam pembuatan model merupakan data sekunder. Data diambil 
 URL: https://www.kaggle.com/*dataset*s/shibumohapatra/house-price
 
 Berikut merupakan detail dari *dataset* yang digunakan untuk pembuatan model:
-- *dataset* berupa CSV
-- *dataset* terdiri dari 20640 *records* dengan 10 buah fitur yang diukur.
-- *dataset* terdiri dari 1 data kategori dan 9 data numerik.
-- *dataset* memiliki *missing value* sejumlah 205 records
+- Dataset berupa CSV
+- Dataset terdiri dari 20640 *records* dengan 10 buah fitur yang diukur.
+- Dataset terdiri dari 1 data kategori dan 9 data numerik.
+- Dataset memiliki *missing value* sejumlah 205 records
 
 ### Variabel-variabel pada *dataset* adalah sebagai berikut:
 - longitude : koordinat geografis yang digunakan untuk menunjukkan posisi suatu titik dari arah utara ke selatan yang digunakan menentukan posisi suatu titik pada permukaan bumi (diukur dalam satuan derajat)
@@ -130,7 +130,7 @@ Pada proyek yang dikerjakan, algoritma regresi yang coba dibandingkan adalah reg
 Untuk meningkatkan model, dilakukan *hyperparamter tuning*. Adapun paramater yang di-tuning antara lain n_estimators', 'max_depth', 'min_samples_split', dan 'min_samples_leaf. Untuk memudahkan proses *tuning* digunakan GridSearchCV. GridSearchCV itu sendiri merupakan bagian dari modul scikit-learn yang dapat digunakan untuk mendapatkan nilai *hyperparameter* secara otomatis. Grid Search adalah metode yang digunakan untuk mencari parameter yang paling tepat untuk meningkatkan performa model dengan mencoba seluruh kombinasi *hyperparameter* yang diberikan.
 
 ## Evaluation
-Andapun metrik yang sebagai alat ukur perfoma model yang dibuat antara lain **MSE · MAE · R^2**. 
+Andapun metrik yang sebagai alat ukur perfoma model yang dibuat antara lain **MSE · MAE · R<sup>2</sup>**. 
 
 Berikut merupakan rumus dari masing-masing metrik yang digunakan:
 
@@ -148,14 +148,14 @@ Var(y) mewakili varians dari nilai yang diamati.
 Berikut merupakan penjelasan kegunaan dari masing-masing metrik yang digunakan:
 - MAE menghitung rata-rata dari selisih absolut antara nilai prediksi dan nilai aktual. Semakin kecil nilai MAE, semakin baik kualitas model tersebut.
 - MSE menghitung rata-rata dari selisih kuadrat antara nilai prediksi dan nilai aktual. Semakin kecil nilai MSE, semakin baik kualitas model tersebut.
-- R^2 digunakan untuk menilai seberapa besar pengaruh variabel independen tertentu terhadap variabel dependen
+- R<sup>2</sup> digunakan untuk menilai seberapa besar pengaruh variabel independen tertentu terhadap variabel dependen
 
 Gambar 2 berikut merupakan perbandingan 4 buah model yang coba dibandingkan
 
 
 ![Screenshot 2023-07-27 023224](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/75dabae3-c420-42d0-9a26-c81904ba9ea6)
 
-Gambar 2. Perbandingan Performa MAE, MSE, dan R^2 Model
+Gambar 2. Perbandingan Performa MAE, MSE, dan R<sup>2</sup> Model
 
 Berdasarkan Gambar 2, secara umum Model 3 (RF1) dan Model 4 (RF2) menampilkan hasil performa yang lebih baik dimana masing-masing memiliki nilai R^2 yaitu sebesar -1.880080745581838 dan -2.432728538383974.
 
