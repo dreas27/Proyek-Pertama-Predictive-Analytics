@@ -124,6 +124,7 @@ Andapun metrik yang sebagai alat ukur perfoma model yang dibuat antara lain **MS
 Gambar 2 berikut merupakan hasil dari evaluasi model
 
 ![Screenshot 2023-07-27 015320](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/ebefda1e-c2ec-4c52-9b6a-3220fff2ae1a)
+
 Gambar 2. Perbandingan Model
 
 
