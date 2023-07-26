@@ -104,9 +104,11 @@ Dengan menggunakan metode IQR, kita bisa menentukan outlier melalui suatu nilai 
 Semua proses ini diperlukan dalam rangka membuat model yang baik. Gambar 1a & 1b berikut merupakan perbandingan data sebelum dan setelah melalui proses Data Cleaning.
 ![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/89132f98-8fe3-4dda-912f-d289b6b4450f)
 
+
 Gambar 1a. Sebelum Data Cleaning 
 
 ![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/9c4fd4c3-829d-4eef-ba73-36c3c55dfc19)
+
 
 Gambar 1b. Setelah Data Cleaning 
 
@@ -148,13 +150,20 @@ Berikut merupakan penjelasan kegunaan dari masing-masing metrik yang digunakan:
 - MSE menghitung rata-rata dari selisih kuadrat antara nilai prediksi dan nilai aktual. Semakin kecil nilai MSE, semakin baik kualitas model tersebut.
 - R2 digunakan untuk menilai seberapa besar pengaruh variabel independen tertentu terhadap variabel dependen
 
-Gambar 2 berikut merupakan hasil dari evaluasi model
+Gambar 2 berikut merupakan perbandingan 4 buah model yang coba dibandingkan
+![Screenshot 2023-07-27 023224](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/75dabae3-c420-42d0-9a26-c81904ba9ea6)
 
-![Screenshot 2023-07-27 015320](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/ebefda1e-c2ec-4c52-9b6a-3220fff2ae1a)
+Berdasarkan Gambar 2, secara umum Model 3 (RF1) dan Model 4 (RF2) menampilkan hasil performa yang lebih baik dimana masing-masing memiliki nilai R^2 yaitu sebesar -1.880080745581838 dan -2.432728538383974.
 
-Gambar 2. Perbandingan Model
+Selain itu dilakukan perbandingan nilai y_true terhadap nilai prediksi harga rumah dari 4 buah model yang dibuat. Tabel 1 berikut merupakan hasil dari evaluasi model yang telah dibuat.
+
+|     |y_true|prediksi_LR|prediksi_RR|prediksi_RF1|prediksi_RF2|
+|---|---|---|---|---|---|
+|15732|341700|218287.6|218309.3|347466.0|
+
+Tabel 1. Perbandingan Model
 
 
-Berdasarkan hasil evaluasi, terlihat bahwa prediksi dengan Random Forest (RF), baik RF1 (tanpa tuning) ataupun RF2 (dengan tuning) memberikan hasil yang paling mendekati y_true, dimana nilai y_true yaitu 341700 dan nilai RF1 dan RF2 masing-masing yaitu 347466.0 dan 315645.2.
+Berdasarkan hasil evaluasi, terlihat bahwa prediksi harga rumah dengan Random Forest (RF), baik RF1 (tanpa tuning) ataupun RF2 (dengan tuning) memberikan hasil yang paling mendekati y_true, dimana nilai y_true yaitu 341700 dan nilai RF1 dan RF2 masing-masing yaitu 347466.0 dan 315645.2. Dengan demikian bisa disimpulkan bahwa model yang telah dikembangkan dapat memprediksi harga rumah dengan baik dengan menggunakan Random Forest Regressor.
 
 **---Ini adalah bagian akhir laporan---**
