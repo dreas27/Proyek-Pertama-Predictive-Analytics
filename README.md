@@ -10,7 +10,9 @@ Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah s
   
 ## Referensi:
 [1] [ANALISIS FAKTOR-FAKTOR YANG MEMPENGARUHI TINGKAT HARGA PERUMAHAN DI KABUPATEN BULELENG](https://ejournal.undiksha.ac.id/index.php/JJPE/article/view/20041/12010) 
+
 [2] [ANALISIS FAKTOR-FAKTOR YANG MEMPENGARUHI HARGA RUMAH DI KOTA BATAM](https://journal.stiebpbatam.ac.id/tractare/article/download/66/38) 
+
 [3] [Estimasi Model Regresi Linier Dengan Metode Median Kuadrat Terkecil](https://www.neliti.com/id/publications/130812/estimasi-model-regresi-linier-dengan-metode-median-kuadrat-terkecil) 
 
 ## Business Understanding
@@ -25,16 +27,15 @@ Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah s
 - Melakukan proses data wragling dan data preparation terhadap dataset agar dapat dibuat model predksi harga rumah
 - Melakukan beberapa variasi model untuk mendapatkan model yang paling baik dari beberapa model yang telah dibuat untuk prediksi harga rumah
 
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
-
 
 ### Solution statements
 - Untuk eksplorasi fitur dilakukan Analisis Univariat dan Analisis Multivariat. Analisis Univariat dilakukan untuk mengeksploasi data numerik dan data kategorik. Analisis Multivariat dilakukan untuk melihat hubungan antar fitur. Teknik yang digunakan adalah menggunakan catplot, pairplot, dan heatmap untuk melihat Correlation Matrix dari fitur-fitur yang dimiliki.
 - Agar didapatkan model prediksi yang baik maka dilakukan proses Data Wragling yang meliputi Data Gathering, Data Assessing, dan Data Cleaning.
-- Untuk mengetahui perfoma model dilakukan pengecekan performa dengan metrik evaluasi. Adapun metrik yang digunakan pada model regresi yang dibuat antara lain: MSE · MAE · R2 
+- Untuk mengetahui perfoma model dilakukan pengecekan performa dengan metrik evaluasi.
 
 ## Data Understanding
 Data yang digunakan dalam pembuatan model merupakan data sekunder. Data diambil dari Kaggle. 
+
 URL: https://www.kaggle.com/datasets/shibumohapatra/house-price
 
 ### Variabel-variabel pada dataset adalah sebagai berikut:
@@ -55,25 +56,29 @@ Untuk memahami data lebih lanjut, dilakukan teknik visualisasi data seperti meng
 Pada proses Data Preparation dilakukan kegiatan seperti Data Gathering, Data Assessing, dan Data Cleaning.
 Pada proses Data Gathering, data diimpor sedemikian rupa agar bisa dibaca dengan baik menggunakan dataframe Pandas.
 Untuk proses Data Assessing, berikut adalah beberapa pengecekan yang dilakukan:
--- Invalid value
--- Inaccurate value
--- Inconsistent value
--- Missing value
--- Duplicate data
--- Outlier
+- Invalid value
+- Inaccurate value
+- Inconsistent value
+- Missing value
+- Duplicate data
+- Outlier
+ 
 Pada proses Data Cleaning, secara garis besar, terdapat tiga metode yang dapat digunakan antara lain seperti berikut:
--- Dropping
--- Imputation
--- Interpolation
+- Dropping
+- Imputation
+- Interpolation
+ 
 Semua proses ini diperlukan dalam rangka membuat model yang baik.
 
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
 Model yaang digunakan pada proyek ini adalah model regresi. Adapun paramater yang dituning antara lain max_iter, tol, dan learning_rate.
-Regresi memiliki kelebihan, diantaranya:
+
+Kelebihan regresi:
 - Kemudahan untuk digunakan
 - Kekuatan Prediktor dalam mengidentifikasi sekuat apa pengaruh yang diberikan oleh variabel prediktor (variabel independen) terhadap variabel lainnya (variabel dependen).
 - Dapat Memprediksi Tren di Masa yang Akan Datang
+
 Kelemahan dari model regresi adalah karena hasil ramalan dari analisis regresi merupakan nilai estimasi sehingga kemungkinan untuk tidak sesuai dengan data aktual tetaplah ada.
 
 ## Evaluation
