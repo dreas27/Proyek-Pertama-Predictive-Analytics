@@ -1,86 +1,85 @@
-# Laporan Proyek Machine Learning - Ahmad Suaif
+# Laporan Proyek Machine Learning - Prediksi Harga Rumah
 
 ## Domain Proyek
 
-Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+Harga merupakan faktor utama dalam pengambilan keputusan dalam aktivitas jual beli [[1](https://ejournal.undiksha.ac.id/index.php/JJPE/article/view/20041/12010)]. Kemampuan memprediksi harga dapat membantu pembeli sebagai bahan pertimbangan sebelum melakukan transaksi jual beli. 
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
+Dalam hal jual beli rumah harga sangat bergantung pada beberapa faktor, seperti lokasi geografis, demografi, jumlah ruangan, dan lainnya [[2](https://journal.stiebpbatam.ac.id/tractare/article/download/66/38)]. Oleh karena itu, dengan mempertimbangkan faktor-faktor tersebut kita bisa mengestimasi harga dari suatu rumah dengan beberapa kondisi yang dimilikinya. 
+
+Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah satu algoritma yang paling populer dan sederhana adalah regresi [[3](https://www.neliti.com/id/publications/130812/estimasi-model-regresi-linier-dengan-metode-median-kuadrat-terkecil)]. Dengan menggunakan regresi dan memasukkan faktor-faktor dari rumah yang dituju diharapkan kita bisa memprediksi harga rumah yang dimaksud.
   
-  Format Referensi: [Judul Referensi](https://scholar.google.com/) 
+## Referensi:
+[1] [ANALISIS FAKTOR-FAKTOR YANG MEMPENGARUHI TINGKAT HARGA PERUMAHAN DI KABUPATEN BULELENG](https://ejournal.undiksha.ac.id/index.php/JJPE/article/view/20041/12010) 
+[2] [ANALISIS FAKTOR-FAKTOR YANG MEMPENGARUHI HARGA RUMAH DI KOTA BATAM](https://journal.stiebpbatam.ac.id/tractare/article/download/66/38) 
+[3] [Estimasi Model Regresi Linier Dengan Metode Median Kuadrat Terkecil](https://www.neliti.com/id/publications/130812/estimasi-model-regresi-linier-dengan-metode-median-kuadrat-terkecil) 
 
 ## Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
-
 ### Problem Statements
-
-Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+- Berdasarkan eksplorasi dataset, fitur apa saja yang mempengaruhi dalam menentukan estimasi harga rumah?
+- Bagaimana mengolah dataset agar dapat dibuat model prediksi harga rumah?
+- Bagaimanna cara memingkatkan nilai perfoma model prediksi harga rumah?
 
 ### Goals
-
-Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
+- Mengeksplorasi semua fitur yang tersedia pada dataset kemudian membuat melihat korelasi harga dari semua fitur yang sedia untuk melihat faktor apa saja yang paling berpengaruh sampai paling kurang berpengaruh terhadap harga rumah
+- Melakukan proses data wragling dan data preparation terhadap dataset agar dapat dibuat model predksi harga rumah
+- Melakukan beberapa variasi model untuk mendapatkan model yang paling baik dari beberapa model yang telah dibuat untuk prediksi harga rumah
 
 Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
 
-    ### Solution statements
-    - Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-    - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
+### Solution statements
+- Untuk eksplorasi fitur dilakukan Analisis Univariat dan Analisis Multivariat. Analisis Univariat dilakukan untuk mengeksploasi data numerik dan data kategorik. Analisis Multivariat dilakukan untuk melihat hubungan antar fitur. Teknik yang digunakan adalah menggunakan catplot, pairplot, dan heatmap untuk melihat Correlation Matrix dari fitur-fitur yang dimiliki.
+- Agar didapatkan model prediksi yang baik maka dilakukan proses Data Wragling yang meliputi Data Gathering, Data Assessing, dan Data Cleaning.
+- Untuk mengetahui perfoma model dilakukan pengecekan performa dengan metrik evaluasi. Adapun metrik yang digunakan pada model regresi yang dibuat antara lain: MSE · MAE · R2 
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
+Data yang digunakan dalam pembuatan model merupakan data sekunder. Data diambil dari Kaggle. 
+URL: https://www.kaggle.com/datasets/shibumohapatra/house-price
 
-Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
+### Variabel-variabel pada dataset adalah sebagai berikut:
+- longitude : posisi bujur
+- latitude : posisi lintang
+- housing_median_age : usia rata-rata rumah
+- total_rooms : jumlah kamar
+- total_bedrooms : jumlah kamar tidur
+- population : populasi
+- households : jumlah rumah tangga
+- median_income : median pendapatan
+- ocean_proximity : kedekatan terhadap laut
+- median_house_value : median harga rumah
 
-### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+Untuk memahami data lebih lanjut, dilakukan teknik visualisasi data seperti menggunakan catplot, pairplot, dan heatmap. Serta dilakukan juga exploratory data analysis.
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+Pada proses Data Preparation dilakukan kegiatan seperti Data Gathering, Data Assessing, dan Data Cleaning.
+Pada proses Data Gathering, data diimpor sedemikian rupa agar bisa dibaca dengan baik menggunakan dataframe Pandas.
+Untuk proses Data Assessing, berikut adalah beberapa pengecekan yang dilakukan:
+-- Invalid value
+-- Inaccurate value
+-- Inconsistent value
+-- Missing value
+-- Duplicate data
+-- Outlier
+Pada proses Data Cleaning, secara garis besar, terdapat tiga metode yang dapat digunakan antara lain seperti berikut:
+-- Dropping
+-- Imputation
+-- Interpolation
+Semua proses ini diperlukan dalam rangka membuat model yang baik.
 
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
+Model yaang digunakan pada proyek ini adalah model regresi. Adapun paramater yang dituning antara lain max_iter, tol, dan learning_rate.
+Regresi memiliki kelebihan, diantaranya:
+- Kemudahan untuk digunakan
+- Kekuatan Prediktor dalam mengidentifikasi sekuat apa pengaruh yang diberikan oleh variabel prediktor (variabel independen) terhadap variabel lainnya (variabel dependen).
+- Dapat Memprediksi Tren di Masa yang Akan Datang
+Kelemahan dari model regresi adalah karena hasil ramalan dari analisis regresi merupakan nilai estimasi sehingga kemungkinan untuk tidak sesuai dengan data aktual tetaplah ada.
 
 ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
-
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
-
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+Andapun metrik yang sebagai alat ukur perfoma model yang dibuat antara lain **MSE · MAE · R2**. Jelaskan mengenai beberapa hal berikut:
+- MAE menghitung rata-rata dari selisih absolut antara nilai prediksi dan nilai aktual. Semakin kecil nilai MAE, semakin baik kualitas model tersebut.
+- MSE menghitung rata-rata dari selisih kuadrat antara nilai prediksi dan nilai aktual. Semakin kecil nilai MSE, semakin baik kualitas model tersebut.
+- R2 digunakan untuk menilai seberapa besar pengaruh variabel independen tertentu terhadap variabel dependen
 
 **---Ini adalah bagian akhir laporan---**
-
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
