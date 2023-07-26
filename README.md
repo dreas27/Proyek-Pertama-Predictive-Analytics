@@ -42,20 +42,20 @@ Contoh potensi manfaat dari hasil prediksi harga rumah yang akurat adalag memban
 
 
 ### Solution statements
-- Untuk eksplorasi fitur dilakukan Analisis Univariat dan Analisis Multivariat. Analisis Univariat dilakukan untuk mengeksploasi data numerik dan data kategorik. Analisis Multivariat dilakukan untuk melihat hubungan antar fitur. Teknik yang digunakan adalah menggunakan catplot, pairplot, dan heatmap untuk melihat Correlation Matrix dari fitur-fitur yang dimiliki.
-- Agar didapatkan model prediksi yang baik maka dilakukan proses Data Wragling yang meliputi Data Gathering, Data Assessing, dan Data Cleaning.
+- Untuk eksplorasi fitur dilakukan Analisis Univariat dan Analisis Multivariat. Analisis Univariat dilakukan untuk mengeksploasi data numerik dan data kategorik. Analisis Multivariat dilakukan untuk melihat hubungan antar fitur. Teknik yang digunakan adalah menggunakan catplot, pairplot, dan heatmap untuk melihat *Correlation Matrix* dari fitur-fitur yang dimiliki.
+- Agar didapatkan model prediksi yang baik maka dilakukan proses Data Wragling yang meliputi *Data Gathering*, *Data Assessing*, dan *Data Cleaning*.
 - Untuk mengetahui perfoma model dilakukan pengecekan performa dengan metrik evaluasi.
 
 ## Data Understanding
-Data yang digunakan dalam pembuatan model merupakan data sekunder. Data diambil dari Kaggle dengan nama dataset yaitu California House Price. 
+Data yang digunakan dalam pembuatan model merupakan data sekunder. Data diambil dari Kaggle dengan nama dataset yaitu *California House Price*. 
 
 URL: https://www.kaggle.com/datasets/shibumohapatra/house-price
 
 Berikut merupakan detail dari dataset yang digunakan untuk pembuatan model:
 - Dataset berupa CSV
-- Dataset terdiri dari 20640 records dengan 10 buah fitur yang diukur.
+- Dataset terdiri dari 20640 *records* dengan 10 buah fitur yang diukur.
 - Dataset terdiri dari 1 data kategori dan 9 data numerik.
-- Dataset memiliki missing value sejumlah 205 records
+- Dataset memiliki *missing value* sejumlah 205 records
 
 ### Variabel-variabel pada dataset adalah sebagai berikut:
 - longitude : koordinat geografis yang digunakan untuk menunjukkan posisi suatu titik dari arah utara ke selatan yang digunakan menentukan posisi suatu titik pada permukaan bumi (diukur dalam satuan derajat)
@@ -77,9 +77,9 @@ Selain melalui analisis, dilakukan juga Visualisasi Data. Memvisualisasikan data
 Teknik visualisasi yang digunakan pada pembuatan model proyek ini adalah dengan menggunakan catplot yang digunakan untuk memplot distribusi data pada data kategori, pairplot yang digunakan untuk melakukan hubungan antar fitur dalam dataset, dan heatmap yang menampilkan korelasi antar fitur yang ada dalam dataset dalam bentuk matriks.
 
 ## Data Preparation
-Pada proses Data Preparation dilakukan kegiatan seperti Data Gathering, Data Assessing, dan Data Cleaning.
-Pada proses Data Gathering, data diimpor sedemikian rupa agar bisa dibaca dengan baik menggunakan dataframe Pandas.
-Untuk proses Data Assessing, berikut adalah beberapa pengecekan yang dilakukan:
+Pada proses *Data Preparation* dilakukan kegiatan seperti *Data Gathering*, *Data Assessing*, dan *Data Cleaning*.
+Pada proses *Data Gathering*, data diimpor sedemikian rupa agar bisa dibaca dengan baik menggunakan *datafram*e Pandas.
+Untuk proses *Data Assessing*, berikut adalah beberapa pengecekan yang dilakukan:
 - Invalid value
 - Inaccurate value
 - Inconsistent value
@@ -87,19 +87,19 @@ Untuk proses Data Assessing, berikut adalah beberapa pengecekan yang dilakukan:
 - Duplicate data
 - Outlier
  
-Pada proses Data Cleaning, secara garis besar, terdapat tiga metode yang dapat digunakan antara lain seperti berikut:
+Pada proses *Data Cleaning*, secara garis besar, terdapat tiga metode yang dapat digunakan antara lain seperti berikut:
 - Dropping
 - Imputation
 - Interpolation
 
-Pada kasus proyek ini ditemukan Missing Value. Adapaun metode yang digunakan untuk mengatasi hal ini adalah dengan menerapkan imputation dimana data yang missing diganti dengan nilai mean. Untuk outlier sendiri dilakukan proses dropping menggunakan metode IQR. IQR sendiri didapatkan dengan cara mengurangi Q3 dengan Q1 sebagaimana rumusan berikut. 
+Pada kasus proyek ini ditemukan *Missing Value*. Adapaun metode yang digunakan untuk mengatasi hal ini adalah dengan menerapkan *imputation* dimana data yang *missing* diganti dengan nilai *mean*. Untuk *outlier* sendiri dilakukan metode *dropping* menggunakan metode IQR. IQR sendiri didapatkan dengan cara mengurangi Q3 dengan Q1 sebagaimana rumusan berikut. 
 
 $$ IQR = Q<sub>3</sub> - Q<sub>1</sub> $$
 
 dimana
 Q<sub>1</sub> adalah kuartil pertama dan Q<sub>3</sub> adalah kuartil ketiga.
 
-Dengan menggunakan metode IQR, kita bisa menentukan outlier melalui suatu nilai batas yang ditentukan. Setelah menggunakan metode IQR dimana dataset yang sebelumnya berjumlah 20640 menjadi 17609.
+Dengan menggunakan metode IQR, kita bisa menentukan *outlier* melalui suatu nilai batas yang ditentukan. Setelah menggunakan metode IQR dimana dataset yang sebelumnya berjumlah 20640 menjadi 17609.
  
 Semua proses ini diperlukan dalam rangka membuat model yang baik. Gambar 1a & 1b berikut merupakan perbandingan data sebelum dan setelah melalui proses Data Cleaning.
 ![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/89132f98-8fe3-4dda-912f-d289b6b4450f)
@@ -112,10 +112,10 @@ Gambar 1a. Sebelum Data Cleaning
 
 Gambar 1b. Setelah Data Cleaning 
 
-Setelah melalui proses Data Cleaning, dataset dibagi menjadi data train dan data test untuk proses Modeling, dimana rasio pembagian data yang dipilih adalah 90:10 mengingat data test untuk rasio tersebut sudah terbilang cukup. 
+Setelah melalui proses *Data Cleaning*, dataset dibagi menjadi data train dan data test untuk proses *Modeling*, dimana rasio pembagian data yang dipilih adalah 90:10 mengingat data test untuk rasio tersebut sudah terbilang cukup. 
 Adapun detail dari dataset tersebut adalah:
-- Total sampel di dalam dataset train: 15848
-- Total sampel di dalam dataset test: 1761
+- Total sampel di dalam *dataset* train: 15848
+- Total sampel di dalam *dataset* test: 1761
 
 ## Modeling
 Seperti yang dijelaskan di awal, model yang dipilih adalah model regresi karena merupakan salah satu algoritma yang paling umum digunakan dalam pembuatan model prediksi. Namun begitu terdapat kelebihan dan kekurangan dari model regresi, yaitu:
@@ -125,12 +125,12 @@ Kelebihan regresi:
 - Dapat memprediksi nilai/tren di masa yang mendatang
 Kelemahan dari model regresi adalah karena hasil ramalan dari analisis regresi merupakan nilai estimasi sehingga kemungkinan untuk tidak sesuai dengan data aktual tetaplah ada.
 
-Pada proyek yang dikerjakan, algoritma regresi yang coba dibandingkan adalah regresi linear, regresi ridge, random forest regressor, dan random forest regressor dengan hyperparamter tuning. Regresi linear adalah teknik analisis data yang memprediksi nilai data yang tidak diketahui dengan menggunakan nilai data lain yang terkait dan diketahui dimana secara matematis dimodelkan sebagai persamaan linier, regresi ridge merupakan metode estimasi koefisien regresi yang diperoleh melalui penambahan konstanta bias c, dan random forest adalah suatu algoritma yang digunakan pada klasifikasi data dalam jumlah yang besar dimana teknik klasifikasi random forest dilakukan melalui penggabungan pohon dengan melakukan training pada sampel data yang dimiliki.
+Pada proyek yang dikerjakan, algoritma regresi yang coba dibandingkan adalah regresi linear, regresi ridge, *random forest regressor*, dan *random forest regressor* dengan hyperparamter tuning. Regresi linear adalah teknik analisis data yang memprediksi nilai data yang tidak diketahui dengan menggunakan nilai data lain yang terkait dan diketahui dimana secara matematis dimodelkan sebagai persamaan linier, regresi ridge merupakan metode estimasi koefisien regresi yang diperoleh melalui penambahan konstanta bias c, dan random forest adalah suatu algoritma yang digunakan pada klasifikasi data dalam jumlah yang besar dimana teknik klasifikasi *random forest* dilakukan melalui penggabungan pohon dengan melakukan training pada sampel data yang dimiliki.
 
-Untuk meningkatkan model, dilakukan hyperparamter tuning. Adapun paramater yang dituning antara lain n_estimators', 'max_depth', 'min_samples_split', dan 'min_samples_leaf. Untuk memudahkan proses tuning digunakan GridSearchCV. GridSearchCV itu sendiri merupakan bagian dari modul scikit-learn yang dapat digunakan untuk mendapatkan nilai hyperparameter secara otomatis. Grid Search adalah metode yang digunakan untuk mencari parameter yang paling tepat untuk meningkatkan performa model dengan mencoba seluruh kombinasi hyperparameter yang diberikan.
+Untuk meningkatkan model, dilakukan *hyperparamter tuning*. Adapun paramater yang di-tuning antara lain n_estimators', 'max_depth', 'min_samples_split', dan 'min_samples_leaf. Untuk memudahkan proses *tuning* digunakan GridSearchCV. GridSearchCV itu sendiri merupakan bagian dari modul scikit-learn yang dapat digunakan untuk mendapatkan nilai *hyperparameter* secara otomatis. Grid Search adalah metode yang digunakan untuk mencari parameter yang paling tepat untuk meningkatkan performa model dengan mencoba seluruh kombinasi *hyperparameter* yang diberikan.
 
 ## Evaluation
-Andapun metrik yang sebagai alat ukur perfoma model yang dibuat antara lain **MSE · MAE · R2**. 
+Andapun metrik yang sebagai alat ukur perfoma model yang dibuat antara lain **MSE · MAE · R^2**. 
 
 Berikut merupakan rumus dari masing-masing metrik yang digunakan:
 
@@ -148,10 +148,14 @@ Var(y) mewakili varians dari nilai yang diamati.
 Berikut merupakan penjelasan kegunaan dari masing-masing metrik yang digunakan:
 - MAE menghitung rata-rata dari selisih absolut antara nilai prediksi dan nilai aktual. Semakin kecil nilai MAE, semakin baik kualitas model tersebut.
 - MSE menghitung rata-rata dari selisih kuadrat antara nilai prediksi dan nilai aktual. Semakin kecil nilai MSE, semakin baik kualitas model tersebut.
-- R2 digunakan untuk menilai seberapa besar pengaruh variabel independen tertentu terhadap variabel dependen
+- R^2 digunakan untuk menilai seberapa besar pengaruh variabel independen tertentu terhadap variabel dependen
 
 Gambar 2 berikut merupakan perbandingan 4 buah model yang coba dibandingkan
+
+
 ![Screenshot 2023-07-27 023224](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/75dabae3-c420-42d0-9a26-c81904ba9ea6)
+
+Gambar 2. Perbandingan Performa MAE, MSE, dan R^2 Model
 
 Berdasarkan Gambar 2, secara umum Model 3 (RF1) dan Model 4 (RF2) menampilkan hasil performa yang lebih baik dimana masing-masing memiliki nilai R^2 yaitu sebesar -1.880080745581838 dan -2.432728538383974.
 
@@ -164,6 +168,6 @@ Selain itu dilakukan perbandingan nilai y_true terhadap nilai prediksi harga rum
 Tabel 1. Perbandingan Model
 
 
-Berdasarkan hasil evaluasi, terlihat bahwa prediksi harga rumah dengan Random Forest (RF), baik RF1 (tanpa tuning) ataupun RF2 (dengan tuning) memberikan hasil yang paling mendekati y_true, dimana nilai y_true yaitu 341700 dan nilai RF1 dan RF2 masing-masing yaitu 347466.0 dan 315645.2. Dengan demikian bisa disimpulkan bahwa model yang telah dikembangkan dapat memprediksi harga rumah dengan baik dengan menggunakan Random Forest Regressor.
+Berdasarkan hasil evaluasi, terlihat bahwa prediksi harga rumah dengan *Random Forest* (RF), baik RF1 (tanpa tuning) ataupun RF2 (dengan tuning) memberikan hasil yang paling mendekati y_true, dimana nilai y_true yaitu 341700 dan nilai RF1 dan RF2 masing-masing yaitu 347466.0 dan 315645.2. Dengan demikian bisa disimpulkan bahwa model yang telah dikembangkan dapat memprediksi harga rumah dengan baik dengan menggunakan *Random Forest Regressor*.
 
 **---Ini adalah bagian akhir laporan---**
