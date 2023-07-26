@@ -2,18 +2,28 @@
 
 ## Domain Proyek
 
-Harga merupakan faktor utama dalam pengambilan keputusan dalam aktivitas jual beli [[1](https://ejournal.undiksha.ac.id/index.php/JJPE/article/view/20041/12010)]. Kemampuan memprediksi harga dapat membantu pembeli sebagai bahan pertimbangan sebelum melakukan transaksi jual beli. 
+Harga rumah merupakan faktor utama dalam pengambilan keputusan dalam aktivitas jual beli rumah [[1](https://www.researchgate.net/publication/353333759_Factors_Influencing_Housing_Purchase_Decision)] [[2](https://www.researchgate.net/publication/285661484_Housing_Market_A_Review_of_Purchase_Decision_of_Potential_Buyers)] [[3](https://www.researchgate.net/publication/354085963_Analysis_of_County_Consumers%27_Housing_Purchase_Intention_and_Influencing_Factors--Based_on_the_Investigation_of_Anyue_County)]. Kemampuan memprediksi harga rumah tentunya membantu pembeli sebelum melakukan transaksi jual beli rumah. 
 
-Dalam hal jual beli rumah harga sangat bergantung pada beberapa faktor, seperti lokasi geografis, demografi, jumlah ruangan, dan lainnya [[2](https://journal.stiebpbatam.ac.id/tractare/article/download/66/38)]. Oleh karena itu, dengan mempertimbangkan faktor-faktor tersebut kita bisa mengestimasi harga dari suatu rumah dengan beberapa kondisi yang dimilikinya. 
+Dalam hal jual beli rumah harga sangat bergantung pada beberapa faktor, seperti lokasi geografis, demografi, jumlah ruangan, dan lainnya. Salah satu faktor yang menarik untuk ditelusuri lebih lanjut adalah faktor view dari rumah [[4](https://www.sciencedirect.com/science/article/pii/S0264275118312241)] [[5](https://www.researchgate.net/publication/333880192_The_price_of_a_view_Estimating_the_impact_of_view_on_house_prices)]. Oleh karena itu, dengan mempertimbangkan faktor-faktor tersebut, yang juga tersedia pada dataset, kita akan mengestimasi harga dari rumah tersebut dan melihat seberapa besar korelasi pengaruh faktor-faktor tersebut.
 
-Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah satu algoritma yang paling populer dan sederhana adalah regresi [[3](https://www.neliti.com/id/publications/130812/estimasi-model-regresi-linier-dengan-metode-median-kuadrat-terkecil)]. Dengan menggunakan regresi dan memasukkan faktor-faktor dari rumah yang dituju diharapkan kita bisa memprediksi harga rumah yang dimaksud.
+Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah satu algoritma yang paling umum digunakan adalah regresi. Dengan menggunakan regresi dan memasukkan faktor-faktor dari rumah yang dituju diharapkan kita bisa memprediksi harga rumah yang dimaksud [[6](https://www.researchgate.net/publication/360473275_HOUSE_PRICE_PREDICTION_USING_LINEAR_REGRESSION_IN_ML)] [[7](https://www.researchgate.net/publication/364039805_Prediction_and_Analysis_of_Housing_Price_Based_on_the_Generalized_Linear_Regression_Model)] [[8](https://www.researchgate.net/publication/23534659_Determinants_of_House_Prices_A_Quantile_Regression_Approach)].
   
 ## Referensi:
-[1] [ANALISIS FAKTOR-FAKTOR YANG MEMPENGARUHI TINGKAT HARGA PERUMAHAN DI KABUPATEN BULELENG](https://ejournal.undiksha.ac.id/index.php/JJPE/article/view/20041/12010) 
+[1] Hassan, Mohammad Mujaheed & Ahmad, Nobaya & Hariza, Ahmad & Hashim, Ahmad. (2021). Factors Influencing Housing Purchase Decision. 11. 429-443. 10.6007/IJARBSS/v11-i7/10295.
 
-[2] [ANALISIS FAKTOR-FAKTOR YANG MEMPENGARUHI HARGA RUMAH DI KOTA BATAM](https://journal.stiebpbatam.ac.id/tractare/article/download/66/38) 
+[2] Ariyawansa, Ranthilaka. (2009). Housing Market: A Review of Purchase Decision of Potential Buyers.
 
-[3] [Estimasi Model Regresi Linier Dengan Metode Median Kuadrat Terkecil](https://www.neliti.com/id/publications/130812/estimasi-model-regresi-linier-dengan-metode-median-kuadrat-terkecil) 
+[3] Jiang, Jiaxin & Zhang, Jin. (2021). Analysis of County Consumers’ Housing Purchase Intention and Influencing Factors. 
+
+[4] Heymann, Sommervoll. (2019). House prices and relative location
+
+[5] Jayasekare, Ajith & Herath, Shanaka & Wickramasuriya, Rohan & Perez, Pascal. (2019). The price of a view: Estimating the impact of view on house prices. Pacific Rim Property Research Journal. 25. 1-18. 10.1080/14445921.2019.1626543. 
+
+[6] Agarwal, Umang & Gupta, Smriti & Goyal, Madhav. (2022). HOUSE PRICE PREDICTION USING LINEAR REGRESSION IN ML. 10.13140/RG.2.2.11175.62887. 
+
+[7] Li, Xinshu. (2022). Prediction and Analysis of Housing Price Based on the Generalized Linear Regression Model. Computational Intelligence and Neuroscience. 2022. 1-9. 10.1155/2022/3590224. 
+
+[8] Zietz, Joachim & Zietz, Emily & Sirmans, G.. (2008). Determinants of House Prices: A Quantile Regression Approach. The Journal of Real Estate Finance and Economics. 37. 317-333. 10.1007/s11146-007-9053-7. 
 
 ## Business Understanding
 
