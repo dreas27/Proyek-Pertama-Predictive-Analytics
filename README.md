@@ -92,7 +92,14 @@ Pada proses Data Cleaning, secara garis besar, terdapat tiga metode yang dapat d
 - Imputation
 - Interpolation
 
-Pada kasus proyek ini ditemukan Missing Value. Adapaun metode yang digunakan untuk mengatasi hal ini adalah dengan menerapkan imputation dimana data yang missing diganti dengan nilai mean. Untuk outlier sendiri dilakukan proses dropping dimana dataset yang sebelumnya berjumlah 20640 menjadi 17609.
+Pada kasus proyek ini ditemukan Missing Value. Adapaun metode yang digunakan untuk mengatasi hal ini adalah dengan menerapkan imputation dimana data yang missing diganti dengan nilai mean. Untuk outlier sendiri dilakukan proses dropping menggunakan metode IQR. IQR sendiri didapatkan dengan cara mengurangi Q3 dengan Q1 sebagaimana rumusan berikut. 
+
+$$ IQR = Q<sub>3</sub> - Q<sub>1</sub> $$
+
+dimana
+Q<sub>1</sub> adalah kuartil pertama dan Q<sub>3</sub> adalah kuartil ketiga.
+
+Dengan menggunakan metode IQR, kita bisa menentukan outlier melalui suatu nilai batas yang ditentukan. Setelah menggunakan metode IQR dimana dataset yang sebelumnya berjumlah 20640 menjadi 17609.
  
 Semua proses ini diperlukan dalam rangka membuat model yang baik. Gambar 1a & 1b berikut merupakan perbandingan data sebelum dan setelah melalui proses Data Cleaning.
 ![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/89132f98-8fe3-4dda-912f-d289b6b4450f)
@@ -101,7 +108,10 @@ Gambar 1a. Sebelum Data Cleaning
 ![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/9c4fd4c3-829d-4eef-ba73-36c3c55dfc19)
 Gambar 1b. Setelah Data Cleaning 
 
-Setelah melalui proses Data Cleaning, dataset dibagi menjadi data train dan data test untuk proses Modeling, dimana rasio pembagian data yang dipilih adalah 90:10 mengingat data test untuk rasio tersebut sudah terbilang cukup.
+Setelah melalui proses Data Cleaning, dataset dibagi menjadi data train dan data test untuk proses Modeling, dimana rasio pembagian data yang dipilih adalah 90:10 mengingat data test untuk rasio tersebut sudah terbilang cukup. 
+Adapun detail dari dataset tersebut adalah:
+- Total sampel di dalam dataset train: 15848
+- Total sampel di dalam dataset test: 1761
 
 ## Modeling
 Seperti yang dijelaskan di awal, model yang dipilih adalah model regresi karena merupakan salah satu algoritma yang paling umum digunakan dalam pembuatan model prediksi. Namun begitu terdapat kelebihan dan kekurangan dari model regresi, yaitu:
@@ -117,8 +127,19 @@ Untuk meningkatkan model, dilakukan hyperparamter tuning. Adapun paramater yang 
 
 ## Evaluation
 Andapun metrik yang sebagai alat ukur perfoma model yang dibuat antara lain **MSE · MAE · R2**. 
+
+Berikut merupakan rumus dan penjelasan dari masing-masing metrik yang digunakan:
+
+$$ MAE = (1/n) Σ |y<sub>i</sub> - ŷ<sub>i</sub>| $$
+
 - MAE menghitung rata-rata dari selisih absolut antara nilai prediksi dan nilai aktual. Semakin kecil nilai MAE, semakin baik kualitas model tersebut.
+
+$$ MSE = (1/n) Σ (y<sub>i</sub> - ŷ<sub>i</sub>)<sup>2</sup> $$
+
 - MSE menghitung rata-rata dari selisih kuadrat antara nilai prediksi dan nilai aktual. Semakin kecil nilai MSE, semakin baik kualitas model tersebut.
+
+$$ R<sup>2</sup> = 1 - (MSE / Var(y)) $$
+
 - R2 digunakan untuk menilai seberapa besar pengaruh variabel independen tertentu terhadap variabel dependen
 
 Gambar 2 berikut merupakan hasil dari evaluasi model
