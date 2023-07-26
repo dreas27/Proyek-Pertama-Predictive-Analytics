@@ -72,12 +72,12 @@ Semua proses ini diperlukan dalam rangka membuat model yang baik.
 
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
-Model yaang digunakan pada proyek ini adalah model regresi. Adapun paramater yang dituning antara lain max_iter, tol, dan learning_rate.
+Model yaang digunakan pada proyek ini adalah model regresi. Pada proyek dikerjakan, algoritma regresi yang coba dibandingkan adalah regresi linear, regresi ridge, random forest regressor, dan random forest regressor dengan hyperparamter tuning. Adapun paramater yang dituning antara lain n_estimators', 'max_depth', 'min_samples_split', dan 'min_samples_leaf. Untuk memudahkan proses tuning digunakan GridSearchCV.
 
 Kelebihan regresi:
 - Kemudahan untuk digunakan
 - Kekuatan Prediktor dalam mengidentifikasi sekuat apa pengaruh yang diberikan oleh variabel prediktor (variabel independen) terhadap variabel lainnya (variabel dependen).
-- Dapat Memprediksi Tren di Masa yang Akan Datang
+- Dapat memprediksi tren di masa yang mendatang
 
 Kelemahan dari model regresi adalah karena hasil ramalan dari analisis regresi merupakan nilai estimasi sehingga kemungkinan untuk tidak sesuai dengan data aktual tetaplah ada.
 
