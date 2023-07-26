@@ -103,9 +103,11 @@ Dengan menggunakan metode IQR, kita bisa menentukan outlier melalui suatu nilai 
  
 Semua proses ini diperlukan dalam rangka membuat model yang baik. Gambar 1a & 1b berikut merupakan perbandingan data sebelum dan setelah melalui proses Data Cleaning.
 ![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/89132f98-8fe3-4dda-912f-d289b6b4450f)
+
 Gambar 1a. Sebelum Data Cleaning 
 
 ![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/9c4fd4c3-829d-4eef-ba73-36c3c55dfc19)
+
 Gambar 1b. Setelah Data Cleaning 
 
 Setelah melalui proses Data Cleaning, dataset dibagi menjadi data train dan data test untuk proses Modeling, dimana rasio pembagian data yang dipilih adalah 90:10 mengingat data test untuk rasio tersebut sudah terbilang cukup. 
