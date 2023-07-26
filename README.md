@@ -19,7 +19,7 @@ Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah s
 
 [5] Jayasekare, Ajith & Herath, Shanaka & Wickramasuriya, Rohan & Perez, Pascal. (2019). The price of a view: Estimating the impact of view on house prices. Pacific Rim Property Research Journal. 25. 1-18. 10.1080/14445921.2019.1626543. 
 
-[6] Agarwal, Umang & Gupta, Smriti & Goyal, Madhav. (2022). HOUSE PRICE PREDICTION USING LINEAR REGRESSION IN ML. 10.13140/RG.2.2.11175.62887. 
+[6] Agarwal, Umang & Gupta, Smriti & Goyal, Madhav. (2022). House Price Prediction using Linear Regression. 10.13140/RG.2.2.11175.62887. 
 
 [7] Li, Xinshu. (2022). Prediction and Analysis of Housing Price Based on the Generalized Linear Regression Model. Computational Intelligence and Neuroscience. 2022. 1-9. 10.1155/2022/3590224. 
 
