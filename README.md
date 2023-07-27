@@ -120,16 +120,7 @@ Q<sub>1</sub> adalah kuartil pertama dan Q<sub>3</sub> adalah kuartil ketiga.
 
 Dengan menggunakan metode IQR, dapat ditentukan *outlier* melalui suatu nilai batas yang ditentukan. Setelah menggunakan metode IQR dimana *dataset* yang sebelumnya berjumlah 20640 menjadi 17609.
  
-Semua proses ini diperlukan dalam rangka membuat model yang baik. Gambar 3a & 3b berikut merupakan perbandingan data sebelum dan setelah melalui proses Data Cleaning.
-![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/89132f98-8fe3-4dda-912f-d289b6b4450f)
-
-
-Gambar 3a. Sebelum Data Cleaning 
-
-![Screenshot 2023-07-27 013748](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/9c4fd4c3-829d-4eef-ba73-36c3c55dfc19)
-
-
-Gambar 3b. Setelah Data Cleaning 
+Semua proses ini diperlukan dalam rangka membuat model yang baik. 
 
 Setelah melalui proses *Data Cleaning*, *dataset* dibagi menjadi data train dan data test untuk proses *Modeling*, dimana rasio pembagian data yang dipilih adalah 90:10 mengingat data test untuk rasio tersebut sudah terbilang cukup. 
 Adapun detail dari *dataset* tersebut adalah:
@@ -193,13 +184,13 @@ Tabel 1. Perbandingan Performa MAE, MSE, dan R<sup>2</sup> Model
 
 Berdasarkan Tabel 1, secara umum Model 3 (RF1) dan Model 4 (RF2) menampilkan hasil performa yang lebih baik dimana masing-masing memiliki nilai R^2 yaitu sebesar -1.880080745581838 dan -2.432728538383974.
 
-Secara lebih jauh perbandingan Model 1, 2, 3, dan 4 bisa dilihat pada Gambar 2 berikut.
+Secara lebih jauh perbandingan Model 1, 2, 3, dan 4 bisa dilihat pada Gambar 3 berikut.
 
 ![download (1)](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/a46a2fa1-d5c5-4371-a18f-409a84bb42da)
 
-Gambar 4. Perbandingan Model berdasarkan Nilai Error (dalam 1e6)
+Gambar 3. Perbandingan Model berdasarkan Nilai Error (dalam 1e6)
 
-Berdasarkan Gambar 4 dapat terlihat bahwa nilai error train dan test dari Model 3 (RF1) dan Model 4 (RF2) jauh lebih baik dibandingkan model lainnya.
+Berdasarkan Gambar 3 dapat terlihat bahwa nilai error train dan test dari Model 3 (RF1) dan Model 4 (RF2) jauh lebih baik dibandingkan model lainnya.
 
 Selain itu dilakukan perbandingan nilai y_true terhadap nilai prediksi harga rumah dari 4 buah model yang dibuat. Tabel 2 berikut merupakan hasil dari evaluasi model yang telah dibuat.
 
