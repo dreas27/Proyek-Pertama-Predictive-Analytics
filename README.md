@@ -11,7 +11,7 @@ Dalam membuat model regresi ada banyak cara algoritma yang bisa dipilih. Salah s
 ## Business Understanding
 
 Pengembangan model prediksi harga rumah memiliki potensi dampak atau manfaat berupa menjadi salah satu alat bantu dalam pengambilan keputusan oleh calon pembeli rumah.
-Contoh potensi manfaat dari hasil prediksi harga rumah yang akurat adalag membantu pembeli dan penjual membuat keputusan jual ataupu beli yang lebih bijaksana.
+Contoh potensi manfaat dari hasil prediksi harga rumah yang akurat adalah membantu pembeli dan penjual membuat keputusan jual ataupu beli yang lebih bijaksana.
 
 ### Problem Statements
 - Berdasarkan eksplorasi *dataset*, fitur apa saja yang mempengaruhi dalam menentukan estimasi harga rumah?
