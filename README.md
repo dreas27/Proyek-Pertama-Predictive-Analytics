@@ -124,8 +124,8 @@ Semua proses ini diperlukan dalam rangka membuat model yang baik.
 
 Setelah melalui proses *Data Cleaning*, *dataset* dibagi menjadi data train dan data test untuk proses *Modeling*, dimana rasio pembagian data yang dipilih adalah 90:10 mengingat data test untuk rasio tersebut sudah terbilang cukup. 
 Adapun detail dari *dataset* tersebut adalah:
-- Total sampel di dalam **dataset** train: 15848
-- Total sampel di dalam **dataset** test: 1761
+- Total sampel di dalam *dataset* train: 15848
+- Total sampel di dalam *dataset* test: 1761
 
 ## Modeling
 Seperti yang dijelaskan di awal, model yang dipilih adalah model regresi karena merupakan salah satu algoritma yang paling umum digunakan dalam pembuatan model prediksi. Dalam bentuk yang sederhana, regresi terdiri dari intersep dan slope yang dituliskan dalam rumusan berikut
