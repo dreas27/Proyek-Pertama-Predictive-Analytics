@@ -69,7 +69,7 @@ Gambar 1a. Analisis Univariat (Data Kategori)
 
 Gambar 1b. Analisis Univariat (Data Numerik)
 
-Berdasarkan Gambar 1a , dapat dilihat bahwa distribusi data kategori untuk 'ocean_proximity' memiliki perbandingan jumlah yang tidak sama, untuk nilai data '<1H OCEAN' berjumlah 7607 dengan persentase 43.2% sedangkan nilai data 'ISLAND' hanya berjumlah 5. Lebih jauh, untuk data numerik memiliki karakteristik, yaitu:
+Berdasarkan Gambar 1a , dapat dilihat bahwa distribusi data kategori untuk 'ocean_proximity' memiliki perbandingan jumlah yang tidak sama, untuk nilai data '<1H OCEAN' berjumlah 7607 dengan persentase 43.2% sedangkan nilai data 'ISLAND' hanya berjumlah 5. Lebih jauh, pada Gambar 1b, untuk data numerik memiliki karakteristik, yaitu:
 - koordinat longitude rumah mayoritas berada pada -118 derajat dan -122 derajat dan koordinat latitude rumah mayoritas berada pada 34 derajat dan 38 derajat
 - median dari umur rumah banyak terdistribusi pada rentang umur 10 - 40, namun nilai terbanyak terdapat pada nilai 50.
 - rata-rata terbanyak untuk data total room dan total bedroom yaitu di antara angka 1000-2000 room dan 200-400 bedroom.
