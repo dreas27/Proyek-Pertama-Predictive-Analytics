@@ -228,5 +228,3 @@ Berdasarkan hasil evaluasi, terlihat bahwa prediksi harga rumah dengan *Random F
 [7] Li, Xinshu. (2022). Prediction and Analysis of Housing Price Based on the Generalized Linear Regression Model. Computational Intelligence and Neuroscience. 2022. 1-9. 10.1155/2022/3590224. 
 
 [8] Zietz, Joachim & Zietz, Emily & Sirmans, G.. (2008). Determinants of House Prices: A Quantile Regression Approach. The Journal of Real Estate Finance and Economics. 37. 317-333. 10.1007/s11146-007-9053-7. 
-
-**---Ini adalah bagian akhir laporan---**
