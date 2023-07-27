@@ -122,7 +122,21 @@ Dengan menggunakan metode IQR, dapat ditentukan *outlier* melalui suatu nilai ba
  
 Semua proses ini diperlukan dalam rangka membuat model yang baik. 
 
-Setelah melalui proses *Data Cleaning*, *dataset* dibagi menjadi data train dan data test untuk proses *Modeling*, dimana rasio pembagian data yang dipilih adalah 90:10 mengingat data test untuk rasio tersebut sudah terbilang cukup. 
+Untuk mereduksi jumlah fitur dilakukan proses PCA. Teknik reduksi ini adalah prosedur yang mengurangi jumlah fitur dengan tetap mempertahankan informasi pada data. PCA ini adalah teknik untuk mereduksi dimensi, mengekstraksi fitur, dan mentransformasi data dari “n-dimensional space” ke dalam sistem berkoordinat baru dengan dimensi m, di mana m lebih kecil dari n. Pada proyek ini, fitu 'housing_median_age',	'total_rooms',	'total_bedrooms',	'households' divisualisasikan untuk melihat hubungan di antara fitur-fitur tersebut. sperti yang terlihat pada Gambar 3 berikut.
+
+![download (7)](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/b05e92dd-398d-4932-9ad2-f75400ac1e26)
+
+Gambar 3 Visualisasi Hubungan antar Fitur sebelum Reduksi PCA
+
+Berdasarkan Gambar 3 dapat diketahui yang memiliki hubungan antar fitur hanya tiga yaitu 'total_rooms',	'total_bedrooms',	'households'. Selanjutnya, 3 fitur ini dapat direduksi dengan PCA. Sebelum itu, cek proporsi informasi dari ketiga komponen PCs tadi.
+
+```
+pca.explained_variance_ratio_.round(3)
+```
+Potongan kode tersebut memberikan keluaran berupa array([0.985, 0.014, 0.001]). Berdasarkan hasil ini, yang dipertahankan adalah PC (komponen) pertama saja karena dari output yang dideroleh diketahui bahwa 98.5% informasi pada ketiga fitur 'total_rooms',	'total_bedrooms',	'households' terdapat pada PC pertama. Sedangkan sisanya, sebesar 1.4% dan 0.1% terdapat pada PC kedua dan ketiga. PC pertama ini akan menjadi fitur 'house properties' menggantikan ketiga fitur lainnya ('total_rooms',	'total_bedrooms',	'households').
+
+
+Setelah data dibersihkan, *dataset* dibagi menjadi data train dan data test untuk proses *Modeling*, dimana rasio pembagian data yang dipilih adalah 90:10 mengingat data test untuk rasio tersebut sudah terbilang cukup. 
 Adapun detail dari *dataset* tersebut adalah:
 - Total sampel di dalam *dataset* train: 15848
 - Total sampel di dalam *dataset* test: 1761
@@ -186,13 +200,13 @@ Tabel 1. Perbandingan Performa MAE, MSE, dan R<sup>2</sup> Model
 
 Berdasarkan Tabel 1, secara umum Model 3 (RF1) dan Model 4 (RF2) menampilkan hasil performa yang lebih baik dimana masing-masing memiliki nilai R^2 yaitu sebesar -1.880080745581838 dan -2.432728538383974.
 
-Secara lebih jauh perbandingan Model 1, 2, 3, dan 4 bisa dilihat pada Gambar 3 berikut.
+Secara lebih jauh perbandingan Model 1, 2, 3, dan 4 bisa dilihat pada Gambar 4 berikut.
 
 ![download (1)](https://github.com/ahmadsuaif/Proyek-Pertama-Predictive-Analytics/assets/66425290/a46a2fa1-d5c5-4371-a18f-409a84bb42da)
 
-Gambar 3. Perbandingan Model berdasarkan Nilai Error (dalam 1e6)
+Gambar 4. Perbandingan Model berdasarkan Nilai Error (dalam 1e6)
 
-Berdasarkan Gambar 3 dapat terlihat bahwa nilai error train dan test dari Model 3 (RF1) dan Model 4 (RF2) jauh lebih baik dibandingkan model lainnya.
+Berdasarkan Gambar 4 dapat terlihat bahwa nilai error train dan test dari Model 3 (RF1) dan Model 4 (RF2) jauh lebih baik dibandingkan model lainnya.
 
 Selain itu dilakukan perbandingan nilai y_true terhadap nilai prediksi harga rumah dari 4 buah model yang dibuat. Tabel 2 berikut merupakan hasil dari evaluasi model yang telah dibuat.
 
