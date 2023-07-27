@@ -167,8 +167,24 @@ Pada proyek yang dikerjakan, algoritma regresi yang coba dibandingkan adalah reg
 
 Untuk meningkatkan model, dilakukan *hyperparamter tuning*. Adapun paramater yang di-tuning antara lain n_estimators', 'max_depth', 'min_samples_split', dan 'min_samples_leaf. Untuk memudahkan proses *tuning* digunakan GridSearchCV. GridSearchCV itu sendiri merupakan bagian dari modul scikit-learn yang dapat digunakan untuk mendapatkan nilai *hyperparameter* secara otomatis. Grid Search adalah metode yang digunakan untuk mencari parameter yang paling tepat untuk meningkatkan performa model dengan mencoba seluruh kombinasi *hyperparameter* yang diberikan.
 
+Berikut adalah nilai parameter *tuning*
+```
+params = {'n_estimators' : [50,80,100],
+          'max_depth' : [3,5,10],
+           'min_samples_split':[2,3,4],
+            'min_samples_leaf': [2,3,4]}
+```
+Berdasarkan hasil pengujian, terpilih grid.best_params_ yaitu 
+```
+{'max_depth': 10,
+ 'min_samples_leaf': 4,
+ 'min_samples_split': 2,
+ 'n_estimators': 100}
+```
+Parameter dengan nilai inilah yang kemudian dibuat sebagai model.
+
 ## Evaluation
-Andapun metrik yang sebagai alat ukur perfoma model yang dibuat antara lain **MSE · MAE · R<sup>2</sup>**. 
+Adapun metrik yang sebagai alat ukur perfoma model yang dibuat antara lain **MSE · MAE · R<sup>2</sup>**. 
 
 Berikut merupakan rumus dari masing-masing metrik yang digunakan:
 
