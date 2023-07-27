@@ -141,6 +141,7 @@ dimana:
 Secara umum, regresi ini itu sendiri digunakan untuk meramalkan pengaruh variabel prediktor terhadap variabel kriterium atau membuktikan ada atau tidaknya hubungan fungsional antara variabel bebas (X) dengan variabel terikat (y).
 
 Namun begitu terdapat kelebihan dan kekurangan dari model regresi, yaitu:
+
 Kelebihan regresi:
 - Kemudahan untuk digunakan
 - Kekuatan Prediktor dalam mengidentifikasi sekuat apa pengaruh yang diberikan oleh variabel prediktor (variabel independen) terhadap variabel lainnya (variabel dependen).
