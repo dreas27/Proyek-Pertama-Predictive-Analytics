@@ -32,7 +32,7 @@ Contoh potensi manfaat dari hasil prediksi harga rumah yang akurat adalah memban
 ## Data Understanding
 Data yang digunakan dalam pembuatan model merupakan data sekunder. Data diambil dari Kaggle dengan nama *dataset* yaitu *California House Price*. 
 
-URL: https://www.kaggle.com/*dataset*s/shibumohapatra/house-price
+URL: https://www.kaggle.com/datasets/shibumohapatra/house-price
 
 Berikut merupakan detail dari *dataset* yang digunakan untuk pembuatan model:
 - Dataset berupa CSV
